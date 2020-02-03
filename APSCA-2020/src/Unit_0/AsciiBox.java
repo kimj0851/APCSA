@@ -10,8 +10,17 @@ public class AsciiBox
 {
 	public static void main(String[] args)
 	{
-		System.out.println("name \t  date \n\n" );
+		System.out.println("Joseph Kim \t  1/31/20 \n\n" );
 		System.out.println("+++++++++++++++++++++++++ " );
+		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAA " );
+		System.out.println("BBBBBBBBBBBBBBBBBBBBBBBBB " );
+		System.out.println("FSZDTFYGUHILJKJXGTSRFYSRD " );
+		System.out.println("WAESD%FGUHIJOKRE%^&*IO)(* " );
+		System.out.println("DSW$%^&*IHGFR%^&*IKJFTYUI " );
+		System.out.println("!@#$%^&*(IUYTRFDCVBHNJKJJ " );
+		System.out.println("BVCDRTYUHSEW#$%^&*(*&^TRG " );
+		System.out.println("+++++++++++++++++++++++++ " );
+		
 
 	}
 }
