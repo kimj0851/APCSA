@@ -1,10 +1,10 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
 
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name -Joseph Kim
+//Date -2/1/20
+//Class -APCSA
+//Lab  -Variables
 package Unit_0;
 public class Variables
 {
