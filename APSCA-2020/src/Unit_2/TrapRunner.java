@@ -1,10 +1,10 @@
 //© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  - 
-
-public class TrapRunner
+//Name - Joseph Kim
+//Date - 2/3/20
+//Class - p2
+//Lab  - Trap area
+package Unit_2;
+class TrapRunner
 {
 	public static void main( String[] args )
 	{
