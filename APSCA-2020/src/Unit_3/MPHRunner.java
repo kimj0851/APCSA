@@ -36,6 +36,6 @@ public class MPHRunner
 		System.out.println("test one " + (test1.toString()));
 		MilesPerHour test2 = new MilesPerHour(100, 1, 50);
 		test2.calcMPH();
-		System.out.println("test two " + (test2.toString()));
+		System.out.println("test two` " + (test2.toString()));
 	}
 }
