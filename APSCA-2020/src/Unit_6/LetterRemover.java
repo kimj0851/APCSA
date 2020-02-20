@@ -32,7 +32,7 @@ public class LetterRemover
 		int loc = sentence.indexOf(lookFor);
 		while (loc != -1)
 		{
-			System.out.println(loc);
+			System.out.println(loc); 
 			sentence = sentence.substring(0,loc) + sentence.substring(loc+1);
 			loc = sentence.indexOf(lookFor);
 

@@ -18,7 +18,7 @@ public class NumberVerifyRunner
 		out.print("Type in a number :: ");
 		int num = keyboard.nextInt();
 		out.println(num + " is odd " + NumberVerify.isOdd(num));
-		out.println(num + " 6is even " + NumberVerify.isEven(num));
+		out.println(num + " is even " + NumberVerify.isEven(num));
 		
 		//add in more test cases
 		System.out.println("5 is odd :: " + NumberVerify.isOdd(5));
@@ -27,8 +27,12 @@ public class NumberVerifyRunner
 		System.out.println("111 is even :: " + NumberVerify.isEven(111));
 		
 		System.out.println("2000 is odd :: " + NumberVerify.isOdd(2000));
+		System.out.println("2000 is odd :: " + NumberVerify.isEven(2000));
+		System.out.println("-99 is even :: " + NumberVerify.isOdd(-99));
 		System.out.println("-99 is even :: " + NumberVerify.isEven(-99));
 		System.out.println("1111 is odd :: " + NumberVerify.isOdd(1111));
+		System.out.println("1111 is odd :: " + NumberVerify.isEven(1111));
+		System.out.println("-850 is even :: " + NumberVerify.isOdd(-850));
 		System.out.println("-850 is even :: " + NumberVerify.isEven(-850));
 		
 	}
