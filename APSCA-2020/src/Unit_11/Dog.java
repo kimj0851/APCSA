@@ -1,6 +1,7 @@
 //(c) A+ Computer Science
 //www.apluscompsci.com
-//Name -
+//Name - Joseph Kim
+package Unit_11;
 
 public class Dog 
 {

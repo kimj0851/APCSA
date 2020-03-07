@@ -73,7 +73,7 @@ public class Deck {
 			return true;
 		}
 		return false;
-	}
+	}	
 	
 	public int size() {
 		return size;

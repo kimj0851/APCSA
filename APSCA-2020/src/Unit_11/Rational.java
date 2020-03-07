@@ -48,7 +48,7 @@ class Rational implements Comparable<Rational>
 	{
 		other.getNumerator();
 		other.getDenominator();
-		numerator = numerator*  other.getDenominator() + other.getNumerator() + denominator;
+		numerator = (numerator *  other.getDenominator()) + (other.getNumerator() * denominator);
 		denominator = denominator * other.getDenominator();
 		//new numerator = (num1 * den2 + num2 * den1)	
 		//new denominator = (den1 * den2)
@@ -57,65 +57,33 @@ class Rational implements Comparable<Rational>
 
 	private void reduce()
 	{
-		if (numerator > denominator)
-		{
-			int x = 0;
-			for (int i =2; i < denominator; i++)
-			{
-				if (numerator % i == 0 && denominator % i == 0)
-				{
-					x = i;
-				}
-			}
-			numerator = numerator / x;
-			denominator = denominator / x;
-		}
-		else if(numerator < denominator)
-		{
-			int x = 0;
-			for (int i =2; i < numerator; i++)
-			{
-				if (numerator % i == 0 && denominator % i == 0)
-				{
-					x = i;
-				}
-			}
-			numerator = numerator / x;
-			denominator = denominator / x;
-		}
-
-
+		int numPlacer = numerator;
+		numerator = numerator / gcd(numerator, denominator);
+		denominator = denominator / gcd(numPlacer, denominator);
 	}
 
 	private int gcd(int numOne, int numTwo)
 	{
-	int x =0;
-		if (numerator > denominator)
+		if (numOne >= numTwo)
 		{
-			for (int i =2; i < denominator; i++)
+			for(int i =numOne; i > 1; i--)
 			{
-				if (numerator % i == 0 && denominator % i == 0)
-				{
-					x = i;
+				if (numOne%i ==0 && numTwo %i ==0) {
+					return i;
 				}
 			}
-			numerator = numerator / x;
-			denominator = denominator / x;
-		}
-		else if(numerator < denominator)
+		}		
+		else if (numOne < numTwo)
 		{
-			for (int i =2; i < numerator; i++)
+			for(int i =numTwo; i > 1; i--)
 			{
-				if (numerator % i == 0 && denominator % i == 0)
-				{
-					x = i;
+				if (numOne%i ==0 && numTwo %i ==0) {
+					return i;
 				}
 			}
-			numerator = numerator / x;
-			denominator = denominator / x;
 		}
 
-		return x;
+		return 1;
 	}
 
 	public Object clone ()
@@ -129,11 +97,12 @@ class Rational implements Comparable<Rational>
 	//write get methods for numerator and denominator
 	
 	
-	public boolean equals( Object obj)
+	public boolean equals( Rational obj)
 	{
 		
-		((Rational) obj).reduce();
-		if (numerator = other.getNumerator() && denominator = other.getDenominator())
+		if ((double)obj.getNumerator() / obj.getDenominator() == (double)numerator/denominator) {
+			return true;
+		}
 
 
 		return false;
@@ -141,6 +110,9 @@ class Rational implements Comparable<Rational>
 
 	public int compareTo(Rational other)
 	{
+		if ((double) numerator/denominator >= (double) other.getNumerator()/other.getDenominator()) {
+			return 1;
+		}
 
 
 		return -1;
@@ -148,7 +120,11 @@ class Rational implements Comparable<Rational>
 
 
 
-	
+	public String toString() 
+	{
+		return numerator + "/" + denominator;
+	}
+
 	//write  toString() method
 	
 	
