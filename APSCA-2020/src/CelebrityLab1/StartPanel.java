@@ -1,4 +1,4 @@
-package CelebrityLab;
+package CelebrityLab1;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -106,8 +106,8 @@ public class StartPanel extends JPanel
 	 */
 	private int celebrityCount;
 	
-	private JRadioButton ActorRadio;
-	private String ActorClue;
+	private JRadioButton actorRadio;
+	private String actorClue;
 
 	/**
 	 * Constructs a StartPanel with a reference to the game passed as a
@@ -128,7 +128,7 @@ public class StartPanel extends JPanel
 		this.literatureClue = "Enter the clues for the literature celeb separated by commas";
 		this.clueLabel = new JLabel(celebrityClue);
 		
-		this.answerField = new JTextField("Type celebrity here (4 letters minimum)");
+		this.answerField = new JTextField("Type celebrity here (4 letters minimum thx Cher)");
 		this.clueField = new JTextField("Enter celebrity clue here (10 letters minimum)");
 		this.addCelebrityButton = new JButton("Add current celebrity");
 		this.startButton = new JButton("Start Celebrity game");
@@ -136,8 +136,8 @@ public class StartPanel extends JPanel
 		this.countLabelText = "Current Celebrity Count: " + celebrityCount;
 		this.celebrityCountLabel = new JLabel(countLabelText);
 		
-		this.ActorRadio = new JRadioButton("Actor");
-		this.ActorClue = "Enter the clues for the Actor separated by commas ";
+		this.actorRadio = new JRadioButton("Basketball");
+		this.actorClue = "Enter the clues for the celebrity separated by commas ";
 
 		setupPanel();
 		setupLayout();
@@ -165,8 +165,8 @@ public class StartPanel extends JPanel
 		{
 			validClue = controller.validateClue(clueText, "Literature");
 		}
-		else if (ActorRadio.isSelected()) {
-			validClue = controller.validateClue(clueText, "Actor");
+		else if (actorRadio.isSelected()) {
+			validClue = controller.validateClue(clueText, "Basketball");
 		}
 		else
 		{
@@ -196,7 +196,7 @@ public class StartPanel extends JPanel
 		this.add(startButton);
 		this.add(celebrityCountLabel);
 		this.add(addCelebrityButton);
-		this.add(ActorRadio);
+		this.add(actorRadio);
 
 
 		// Adds the RadioButtons to the group so only one can be selected.
@@ -204,7 +204,7 @@ public class StartPanel extends JPanel
 		startButton.setEnabled(false);
 		typeGroup.add(celebrityRadio);
 		typeGroup.add(literatureRadio);
-		typeGroup.add(ActorRadio);
+		typeGroup.add(actorRadio);
 
 	}
 
@@ -228,9 +228,9 @@ public class StartPanel extends JPanel
 
 		//Put your custom radio button info here
 		
-		panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, ActorRadio);
-		panelLayout.putConstraint(SpringLayout.WEST,ActorRadio, 0, SpringLayout.WEST, celebrityRadio);
-		panelLayout.putConstraint(SpringLayout.NORTH, ActorRadio, 10, SpringLayout.SOUTH, celebrityRadio);
+		panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, actorRadio);
+		panelLayout.putConstraint(SpringLayout.WEST,actorRadio, 0, SpringLayout.WEST, celebrityRadio);
+		panelLayout.putConstraint(SpringLayout.NORTH, actorRadio, 10, SpringLayout.SOUTH, celebrityRadio);
 		panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
 
 		panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);
@@ -289,7 +289,7 @@ public class StartPanel extends JPanel
 		 */
 		literatureRadio.addActionListener(select -> clueLabel.setText(literatureClue));
 		celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
-		ActorRadio.addActionListener(select -> clueLabel.setText(ActorClue));
+		actorRadio.addActionListener(select -> clueLabel.setText(actorClue));
 
 	}
 	
@@ -308,8 +308,8 @@ public class StartPanel extends JPanel
 		{
 			type = "Literature";
 		}
-		else if (ActorRadio.isSelected()) {
-			type = "Basketball";
+		else if (actorRadio.isSelected()) {
+			type = "Actor";
 		}
 		String answer = answerField.getText().trim();
 		String clue = clueField.getText().trim();

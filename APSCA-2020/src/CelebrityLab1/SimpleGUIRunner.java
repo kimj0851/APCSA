@@ -1,5 +1,4 @@
-package CelebrityLab;
-
+package CelebrityLab1;
 import javax.swing.JFrame;
 
 public class SimpleGUIRunner

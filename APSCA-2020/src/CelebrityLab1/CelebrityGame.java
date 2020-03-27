@@ -1,5 +1,4 @@
-
-package CelebrityLab;
+package CelebrityLab1;
 import java.util.ArrayList;
 
 /**
@@ -13,25 +12,18 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
-
+	private Celebrity gameCelebrity;
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-
+	private CelebrityFrame gameWindow;
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-
+	public ArrayList<Celebrity> celebGameList = new ArrayList<Celebrity>();
 	/**
 	 * Builds the game and starts the GUI
 	 */
-	
-	private ArrayList<Celebrity> celebGameList;
-	
-	private Celebrity gameCelebrity;
-	
-	private CelebrityFrame gameWindow;
-	
 	public CelebrityGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
@@ -77,12 +69,11 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		if (celebGameList != null && celebGameList.size() > 0 )
+		if (celebGameList != null && celebGameList.size() > 0)
 		{
-			this.gameCelebrity = celebGameList.get(0);
-			gameWindow.replaceScreen("GAME");
+		this.gameCelebrity = celebGameList.get(0);
+		gameWindow.replaceScreen("GAME");
 		}
-		
 	}
 
 	/**
@@ -98,14 +89,14 @@ public class CelebrityGame
 	public void addCelebrity(String name, String guess, String type)
 	{
 		if (type.equals("Literature")) {
-			celebGameList.add(new LiteratureCelebrity(name,  guess ));
+			this.celebGameList.add(new LiteratureCelebrity(name,  guess ));
 		}
-		else if (type.equals("Basketball")) {
-			celebGameList.add(new ActorCelebrity(name,  guess ));
+		else if (type.equals("Actor")) {
+			this.celebGameList.add(new ActorCelebrity(name,  guess ));
 
 		}
 		else {
-			celebGameList.add(new Celebrity(name,  guess ));
+			this.celebGameList.add(new Celebrity(name,  guess ));
 		}
 	}
 
@@ -116,7 +107,8 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		if (name.length() >= 4 ) {
+		if (name.length() >= 4 ) 
+		{
 			return true;
 		}
 		return false;
@@ -145,7 +137,7 @@ public class CelebrityGame
 					validClue = false;
 				}
 			}
-			else if (type.equalsIgnoreCase("Actor")) {
+			else if (type.equalsIgnoreCase("actor")) {
 				String[] temp = clue.split(",");
 				
 				if (temp.length > 1){
@@ -158,10 +150,6 @@ public class CelebrityGame
 			}
 		}	
 		return validClue;
-		
-	
-		//You will need to add an else if condition here fo or your subclass
-		
 	}
 
 	/**
@@ -175,7 +163,7 @@ public class CelebrityGame
 	}
 
 	/**
-	 * Accessor method for the games clue to maintain low coupling between
+	 * Accessor method for the games clue to maitain low coupling between
 	 * classes
 	 * 
 	 * @return The String clue from the current celebrity.

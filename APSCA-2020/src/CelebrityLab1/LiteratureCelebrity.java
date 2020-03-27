@@ -1,5 +1,4 @@
-package CelebrityLab;
-
+package CelebrityLab1;
 import java.util.ArrayList;
 
 /**

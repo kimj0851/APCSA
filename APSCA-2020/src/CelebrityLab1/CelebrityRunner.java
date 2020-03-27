@@ -1,10 +1,9 @@
+package CelebrityLab1;
 /**
  * Starts the Celebrity Game application
  * @author cody.henrichsen
  *
  */
-package CelebrityLab;
-
 public class CelebrityRunner
 {
 	/**
@@ -13,21 +12,17 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
+		Celebrity test1 = new Celebrity("Arnold Schwarzenegger", "I'll be back");
+		System.out.println(test1);
 		
-		Celebrity newCel = new Celebrity("Arnold Schwarzenegger", "I'll be back");
+		test1.setAnswer("Tom Hanks");
 		
-		System.out.println(newCel);
+		System.out.println(test1);
 		
-		newCel.setAnswer("Tom Hanks");
-		
-		System.out.println(newCel);
-		
-		System.out.println("The clue is " + newCel.getClue() ); 
+		System.out.println("The clue is " + test1.getClue() ); 
 		
 		CelebrityGame game = new CelebrityGame();
 		
 		game.play();
-
-
 	}
 }

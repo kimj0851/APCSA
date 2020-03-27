@@ -1,21 +1,20 @@
+package CelebrityLab1;
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen
  * @version 1.4 17/09/2018
  */
-package CelebrityLab;
 public class Celebrity
 {
 	/**
 	 * The clue to determine the celebrity
 	 */
-	String clue;
-	String name;
+	private String clues;
 	
 	/**
 	 * The answer or name of the celebrity.
 	 */
-	
+	private String answers;
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
@@ -23,8 +22,8 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
-		this.clue = clue;
-		this.name = answer;
+		answers = answer;
+		clues = clue;
 	}
 
 	/**
@@ -33,7 +32,7 @@ public class Celebrity
 	 */
 	public String getClue()
 	{
-		return clue;
+		return clues;
 	}
 
 	/**
@@ -42,7 +41,7 @@ public class Celebrity
 	 */
 	public String getAnswer()
 	{
-		return name;
+		return answers;
 	}
 
 	/**
@@ -51,7 +50,7 @@ public class Celebrity
 	 */
 	public void setClue(String clue)
 	{
-		this.clue = clue;
+		clues = clue;
 		
 	}
 
@@ -61,8 +60,7 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		this.name = answer;
-		
+		answers = answer;
 	}
 	
 	/**
@@ -71,7 +69,7 @@ public class Celebrity
 	@Override
 	public String toString()
 	{
-		return "The name of the celebrity is " +  name;
+		return "answer is " + answers;
 	}
 	
 }
