@@ -61,7 +61,7 @@ public class CelebrityGame
 			celebGameList.remove(0);
 			if(celebGameList.size() == 0) {
 				gameCelebrity = new Celebrity("", "");
-			} 
+			} 	
 			else {
 				gameCelebrity = celebGameList.get(0);
 			}
@@ -100,7 +100,7 @@ public class CelebrityGame
 		if (type.equals("Literature")) {
 			celebGameList.add(new LiteratureCelebrity(name,  guess ));
 		}
-		else if (type.equals("Basketball")) {
+		else if (type.equals("Actor")) {
 			celebGameList.add(new ActorCelebrity(name,  guess ));
 
 		}

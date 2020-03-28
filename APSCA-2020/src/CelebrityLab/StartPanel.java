@@ -309,7 +309,7 @@ public class StartPanel extends JPanel
 			type = "Literature";
 		}
 		else if (ActorRadio.isSelected()) {
-			type = "Basketball";
+			type = "Actor";
 		}
 		String answer = answerField.getText().trim();
 		String clue = clueField.getText().trim();

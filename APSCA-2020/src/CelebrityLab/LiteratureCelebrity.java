@@ -44,7 +44,7 @@ public class LiteratureCelebrity extends Celebrity
 	 * Overridden version of the getClue() method that cycles through each of the individual clues in the series.
 	 * It recreates the clueList if the user has finished the series of clues.
 	 */
-	@Override
+	@Override 
 	public String getClue()
 	{
 		if (clueList.size() == 0)
