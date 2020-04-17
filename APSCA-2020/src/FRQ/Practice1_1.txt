@@ -1,0 +1,54 @@
+pubic static int[] get numTosses(NumberCube cube, int numTosses)
+{
+	int cubetosses[] = new int[ numTosses];
+	for (int i =0; i < cubetosses.length; i++)
+	{
+		 cubetosses[i] = cube.toss();
+	}
+	return cubetoss;
+	
+	
+	
+	
+public static int  getLongestRun(int[] values)
+{
+	 int longestCounter =0;
+	 int longestRun =0;
+	 for (int x =0; x < cubetosses.length; x++)
+	 {
+	 	int counter=0;
+	 	boolean condition =true;
+	 	while (condition =true)
+	 	{
+	 	int placer = x +1;
+	 		if (cubetosses[x] == cubetosses[placer])
+	 		{
+	 			counter ++;
+	 			placer ++;
+	 		}
+	 		else
+	 		{
+	 			condition = false;
+	 		}
+	 	}
+	 	if (placer > longestcounter)
+	 	{
+	 		longestCounter = counter;
+	 		longestRun = placer;
+	 	}
+	 }
+	 if (longestRun ==0)
+	 {
+	 	return -1;
+	 }
+	 else
+	 {
+	 	return longestRun;
+	 }
+	 
+	 	
+	 	
+	 	
+	 	
+	 	
+	 		
