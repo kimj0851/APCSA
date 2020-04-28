@@ -1,0 +1,39 @@
+private int getChargingCost (int startHour, int chargeTime)
+{
+	int placer = startHour;
+	in total = 0;
+	for (int i=0; i < chargeTime; i++)
+	{
+		if (placer == 24)
+		{
+			placer = 0;
+		}
+		total = total + rateTable[placer];
+		placer ++;
+		
+	}
+	return total;
+}
+	 		
+	 		
+	 		
+	 		
+	 		
+	 		
+public int getChargeStartTime(int chargeTime)
+{	
+	int time = chargeTime;
+	int smallest = 10000000000;
+	int placer =0;
+	for (int i=0; i < 24; i++)
+	{
+		int total = BatteryCharger.getChargingCost(i,time);
+		if ( smallest > total)
+		{
+			smallest = total;
+			placer =i;
+		}
+	}
+	return placer;
+		
+		
