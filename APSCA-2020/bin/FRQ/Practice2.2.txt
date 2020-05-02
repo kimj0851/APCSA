@@ -37,14 +37,19 @@ public static boolean isMountain(int[] array)
 			 	i = 0;
 			 }
 		}
-		for (int i = placer+1; i < array.leng; i--)
+		if( mountain == true)
 		{
-			 if (!array[placer] > array[i])
-			 {
-			 	mountain = false;
-			 	i = 0;
-			 }
+			for (int i = placer+1; i < array.length; i++)
+			{
+				 if (!array[placer] > array[i])
+				 {
+				 	mountain = false;
+				 	i = array.length;
+				 }
+			}
 		}
+		return mountain;
+	}
 			 	
 			 
 		

@@ -1,0 +1,38 @@
+public boolean record(int score)
+{
+	for (int i = 0; i < scoreList.size() i++)
+	{
+		boolean added;
+		if (score == scoreList.get(i))
+		{
+			added = false;
+		}
+		else
+		{
+			scoreList.add(score);
+			added = true;
+		}
+		return added;
+	}
+	
+	
+	
+	
+	
+public void recordScores(int[] stuScores)
+{
+		for (int i =0; i < stuScores.size())
+		{
+			min_idx = i;  
+			for (int x = i +1; x < stuScores.size())
+			{
+        if (stuScores.get(x) < stuScore.get(min))  
+        {
+            min_idx = x; 
+        }
+			
+			
+			
+			
+			
+				
