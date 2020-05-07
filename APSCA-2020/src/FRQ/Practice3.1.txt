@@ -1,0 +1,48 @@
+public HiddenWord()
+{
+	Public String getHint(word)
+	{
+		String = keyWord;
+		String = returnWord = keyword;
+		keyWord = word.toUpperCase();
+		
+		Scanner keyboard = new Scanner(System.in);
+   		System.out.println("Enter word");
+   		String guess = keyboard.nextLine();
+   		guess = guess.toUppercase();
+   		
+   		for (int i =0; i< word.length()-1; i++)
+   		{
+
+   			if( word.substring(i,i+1)!= Guess.substring(i,i+1)
+   			{
+   				returnWord.substring(i,i+1) = "*"
+   			}
+   			
+   			for (int x =0; x< word.length()-1; x++)
+   			{
+   				boolean exist = false;
+   				if(guess.substring(i,i+1) == word.substring(x,x+1)
+   				{
+   					exist = true;
+   				}
+   				if( word.substring(i,i+1)!= Guess.substring(i,i+1) && exist)
+   				{
+   					returnWord.substring(i,i+1) = "+"
+   				}
+   			}
+   			
+   			if( word.substring(i,i+1)= Guess.substring(i,i+1)
+   			{
+   				returnWord.substring(i,i+1) = word.( word.substring(i,i+1)
+   			}
+   			
+   			return returnWord;
+   	}
+}
+   				
+   		
+   				
+   		
+   			
+		
