@@ -1,7 +1,4 @@
-package winter;
-//(c) A+ Computer Science
-//www.apluscompsci.com
-//Name -
+package Unit_16;
 
 import java.awt.Color;
 import java.awt.Graphics;
