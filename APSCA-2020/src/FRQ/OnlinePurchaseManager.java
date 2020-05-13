@@ -69,6 +69,16 @@ public class OnlinePurchaseManager
    }
    
    
+   public int getCheapestGizmoByMaker()
+   {
+	   
+	return 0;  
+	   
+   }
+   
+   
+   
+   
    //NOT part of the sample question
    //needed in order to type up and
    //test student code
@@ -93,16 +103,22 @@ classes in order to support this modification.
 Make sure to include the following in your response. 
 
 •	Write the method header for the getCheapestGizmoByMaker method. 
-	DO write code for this part.
+	DO write code for this part.   
+	public int getCheapestGizmoByMaker(maker)
+   {
+	   
+   }
 
 •	Identify any new or modified variables, constants, constructors, 
    or methods aside from the getCheapestGizmoByMaker method. 
    DO NOT write code for this part.
+   you would need a variable for the cheapest item and another one to hold it's place.
    
 •	Describe, for each new or revised variable, constant, constructor, 
    or method, how it would change or be implemented, including visibility and type. 
    You do not need to describe the getCheapestGizmoByMaker method.
    DO NOT write code for this part.
+   the only thing you would require is a vaiable that will compare it with a loop of all the maker items in the array and go through an if statement. 
 
 */
 
