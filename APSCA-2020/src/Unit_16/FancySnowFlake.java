@@ -12,7 +12,7 @@ import java.awt.Polygon;
 
 public class FancySnowFlake extends AbstractShape {
 	
-	
+	;
 	
 	public FancySnowFlake(int xPos, int yPos, int width, int height, Color color, int xSpeed, int ySpeed) 
 	{
