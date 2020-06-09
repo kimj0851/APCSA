@@ -23,13 +23,14 @@ public class Hat extends AbstractShape {
 	public void draw(Graphics window) {
 		window.setColor(Color.black);
 		
-		int[] xLine = { getXPos(), getXPos(),getXPos() + getWidth(), getXPos() + getWidth(),(int) (getXPos() + getWidth()*1.3),(int) (getXPos() + getWidth()*1.3),getXPos() - getWidth()/3,getXPos() - getWidth()/3 };
-		int[] yLine = {getYPos()+ getHeight(), getYPos()  , getYPos(), getYPos() + getHeight(),getYPos() + getHeight(),(int) (getYPos() + getHeight()*1.3),(int) (getYPos() + getHeight()*1.3),getYPos() + getHeight() };
-		
-		
-		window.fillPolygon(xLine, yLine, 8);
-		//   
-	// 
+		//int[] xLine = { getXPos(), getXPos(),getXPos() + getWidth(), getXPos() + getWidth(),(int) (getXPos() + getWidth()*1.3),(int) (getXPos() + getWidth()*1.3),getXPos() - getWidth()/3,getXPos() - getWidth()/3 };
+		//int[] yLine = {getYPos()+ getHeight(), getYPos()  , getYPos(), getYPos() + getHeight(),getYPos() + getHeight(),(int) (getYPos() + getHeight()*1.3),(int) (getYPos() + getHeight()*1.3),getYPos() + getHeight() };
+		//int[] xLine = {getXPos(), getXPos() + getWidth(),(int)(getXPos() + getWidth() + getWidth()/5),getXPos() + getWidth(),(int)(getXPos()  + getWidth()/6) };
+		//int[] yLine = {getYPos()+ getHeight(),getYPos()+ getHeight(),(int)(getYPos()- getHeight()/4), (int)(getYPos()- getHeight()/3), (int)(getYPos()- getHeight()/4) };
+		int[] xLine = {getXPos(), getXPos() + getWidth(),(int)(getXPos() + getWidth() + getWidth()/3),getXPos() + getWidth(),(int)(getXPos()  + getWidth()/6),(int)(getXPos()  - getWidth()/6)};
+		int[] yLine = { getYPos()+ getHeight(),getYPos()+ getHeight(),(int)(getYPos()- getHeight()/4),(int)(getYPos()- getHeight()/2),(int)(getYPos()- getHeight()/3),getYPos()};
+
+		window.fillPolygon(xLine, yLine, 6);
 	}
 	
 	
